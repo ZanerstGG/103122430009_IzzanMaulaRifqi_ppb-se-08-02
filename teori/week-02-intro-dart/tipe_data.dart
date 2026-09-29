@@ -25,8 +25,6 @@ void main(){
   print (b);
   print("tipe data dari variabel B adalah ${b.runtimeType}");
 
-  var namaLengkap;
-
   // Collection -> List -> Array
   // List secara Index dimulai dari 0, 1, 2, ... n
   List<String> names = ["Yuki Sorimachi", "Purple Star", "Kujou Shion"];
