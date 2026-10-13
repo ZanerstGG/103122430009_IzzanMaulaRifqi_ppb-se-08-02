@@ -1,3 +1,4 @@
 {
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "cmake.sourceDirectory": "E:/TUGAS RPL/Tugas Kuliah Praktikum Mobile PPB - Semester 5/103122430009_IzzanMaulaRifqi_ppb-se-08-02/flutter_application/windows"
 }
