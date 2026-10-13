@@ -1,18 +1,16 @@
 void sayHello(String name) {
-  print("Selamat datang di kelas Programming Mobile $name");
+  print('Selamat datang di kelas Programming Mobile $name');
 }
 
-double sum(dynamic a, dynamic b){
+num sum(num a, num b) {
   return a + b;
 }
 
-void main(){
-  sayHello("08-02");
+void main() {
+  const className = '08-02';
+  String? asalSekolah;
+
+  sayHello(className);
   print(sum(10, 20.5));
-
-  String name, alamat, email, nohp, kelas, nim;
-  int id;
-  String? asalSekolah = null;
-
-  print(asalSekolah ?? "Tidak Ada Asal Sekolah");
+  print(asalSekolah ?? 'Tidak Ada Asal Sekolah');
 }
