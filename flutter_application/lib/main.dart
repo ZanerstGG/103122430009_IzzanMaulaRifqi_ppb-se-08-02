@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'beranda.dart';
+import 'pesan.dart';
+import 'biodata.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +33,6 @@ class _HalamanUtamaState extends State<HalamanUtama> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFFF7FF),
       body: SafeArea(
         child: PageView(
           controller: controller,
@@ -40,49 +42,34 @@ class _HalamanUtamaState extends State<HalamanUtama> {
               halamanSekarang = index;
             });
           },
-          children: [
-            const Center(
-              child: Text('Page 1'),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  'Teks di paling atas (SafeArea test)',
-                ),
-                const Expanded(
-                  child: Center(
-                    child: Text('Page 2'),
-                  ),
-                ),
-              ],
-            ),
-            const Center(
-              child: Text('Page 3'),
-            ),
+          children: const [
+            BerandaPage(),
+            PesanPage(),
+            BiodataPage(),
           ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color(0xFFFFF7FF),
         currentIndex: halamanSekarang,
         onTap: pindahHalaman,
-        selectedItemColor: Colors.deepPurple,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: const Color(0xFFF7F8FC),
+        selectedItemColor: Colors.black87,
         unselectedItemColor: Colors.grey,
         selectedFontSize: 10,
         unselectedFontSize: 10,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Page 1',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
-            label: 'Page 2',
+            icon: Icon(Icons.message),
+            label: 'Message',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Page 3',
+            label: 'Profile',
           ),
         ],
       ),
