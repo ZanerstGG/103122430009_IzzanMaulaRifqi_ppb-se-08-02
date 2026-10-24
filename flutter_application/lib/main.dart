@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'm6_textfield.dart';
-// import 'm6_tabbar.dart';
-// import 'm6_button_navigation.dart';
-import 'm6_dropdown.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      title: 'List View Aja YGY',
       debugShowCheckedModeBanner: false,
-      home: M6Dropdown(),
+      theme: ThemeData(useMaterial3: true),
+      home: const HomePage(),
     );
   }
 }
